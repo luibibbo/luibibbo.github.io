@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acerca de la supervisión psicoanalítica: una aproximación teórica y un testimonio | Luis Bibbó</title>
+  <meta name="description" content="Trabajo de Luis Bibbó sobre supervisión psicoanalítica, análisis de control, deseo del analista y formación analítica.">
+  <meta name="author" content="Luis Bibbó">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="article-page.css">
+</head>
+<body>
+  <div class="topbar"><div class="topbar-inner"><a href="index.html#trabajos">← Volver a trabajos presentados</a></div></div>
+  <main>
+    <header>
+      <div class="eyebrow">Trabajo presentado</div>
+      <h1>Acerca de la supervisión psicoanalítica: una aproximación teórica y un testimonio<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h1>
+      <p class="author">Dr. Luis Bibbó</p>
+      <div class="publication">APU, Montevideo, 31 de julio de 2020.</div>
+      <div class="publication"><em>Descriptores:</em> supervisión, análisis de control, deseo del analista.</div>
+    </header>
+    <article id="article-content">
+      <p>Cargando texto…</p>
+    </article>
+    <div class="bottom-nav"><a href="index.html#trabajos">← Volver a trabajos presentados</a></div>
+  </main>
+  <script>
+    const parts = [
+      'supervision-part-1.html',
+      'supervision-part-2.html',
+      'supervision-part-3.html',
+      'supervision-part-4.html',
+      'supervision-part-5.html'
+    ];
+    Promise.all(parts.map(path => fetch(path).then(response => {
+      if (!response.ok) throw new Error('No se pudo cargar ' + path);
+      return response.text();
+    }))).then(htmlParts => {
+      document.getElementById('article-content').innerHTML = htmlParts.join('');
+      if (location.hash) {
+        const target = document.querySelector(location.hash);
+        if (target) target.scrollIntoView();
+      }
+    }).catch(() => {
+      document.getElementById('article-content').innerHTML = '<p>No fue posible cargar el texto completo. Por favor, vuelva a intentarlo.</p>';
+    });
+  </script>
+</body>
+</html>
