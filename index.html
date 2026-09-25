@@ -449,6 +449,14 @@
       line-height: 1.55;
     }
 
+    /* Recorridos temáticos */
+    .recorridos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 2rem; margin-top: 2rem; }
+    .recorrido { padding: 1.2rem 0; border-top: 1px solid var(--line); }
+    .recorrido h3 { font-size: 1.38rem; margin-bottom: 0.5rem; }
+    .recorrido h3 a { color: var(--ink); border-bottom: none; }
+    .recorrido h3 a:hover { color: var(--accent); border-bottom: 1px solid var(--accent); }
+    .recorrido p { font-size: 1rem; color: var(--ink-soft); line-height: 1.55; margin: 0; }
+
     /* Bibliografía */
     .bib-group {
       margin-bottom: 2.5rem;
@@ -624,6 +632,8 @@
 
       .section-head { margin-bottom: 1.6rem; }
 
+      .recorridos { grid-template-columns: 1fr; }
+
       .ejes {
         grid-template-columns: 1fr;
         gap: 1.8rem;
@@ -680,6 +690,7 @@
         <li><a href="#sintesis">Acerca</a></li>
         <li><a href="#trayectoria">Trayectoria</a></li>
         <li><a href="#ejes">Ejes</a></li>
+        <li><a href="#recorridos">Recorridos</a></li>
         <li><a href="#publicaciones">Publicaciones</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -696,6 +707,7 @@
         <p class="hero-tagline">
           Médico psiquiatra. Psicoanalista, Miembro Titular de la Asociación Psicoanalítica del Uruguay.
         </p>
+        <p class="hero-link"><a href="#recorridos">Explorar los recorridos temáticos ↓</a></p>
       </div>
       <img class="hero-portrait"
            src="assets/images/yo.png"
@@ -912,6 +924,27 @@
               <h3>Adicciones, intolerancia y consumismo</h3>
               <p>Odio, consumo y formas actuales del padecimiento subjetivo.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECORRIDOS TEMÁTICOS -->
+    <section id="recorridos" class="reveal">
+      <div class="section-head">
+        <div class="label">Recorridos temáticos</div>
+        <h2>Textos reunidos por temas</h2>
+      </div>
+      <div class="section-body">
+        <div class="side"><p>Una entrada a los trabajos desde las preguntas que los atraviesan.</p></div>
+        <div>
+          <p>Cada recorrido reúne escritos y presentaciones relacionados, con una introducción y acceso a los textos disponibles. Estos recorridos se ampliarán con nuevos trabajos.</p>
+          <div class="recorridos">
+            <article class="recorrido"><h3><a href="https://seguridad-carcel-psicoanalisis-luis-bibbo.luibibbo.chatgpt.site">Seguridad, cárcel y psicoanálisis ↗</a></h3><p>Delito, inclusión y exclusión, respuesta penal y práctica psicoanalítica en la institución penitenciaria.</p></article>
+            <article class="recorrido"><h3><a href="https://intercambio-supervision-luis-bibbo.luibibbo.chatgpt.site">Supervisión psicoanalítica ↗</a></h3><p>La supervisión como espacio tercero, las experiencias en la comunidad y las relaciones entre poder y saber.</p></article>
+            <article class="recorrido"><h3><a href="https://los-nombres-del-malestar.luibibbo.chatgpt.site">Nominación y malestar ↗</a></h3><p>La nominación en torno a lo trans y las preguntas clínicas que se abren cuando el malestar ya tiene un nombre.</p></article>
+            <article class="recorrido"><h3><a href="https://psicoanalisis-en-la-comunidad.luibibbo.chatgpt.site">Psicoanálisis en la comunidad ↗</a></h3><p>El ida y vuelta a la comunidad, la angustia en los equipos y otras intervenciones fuera del consultorio.</p></article>
+            <article class="recorrido"><h3><a href="https://lo-social-el-otro-subjetividad.luibibbo.chatgpt.site">Lo social, el Otro y la subjetividad ↗</a></h3><p>Transformaciones sociales, consumismo, intolerancia y sus efectos en la subjetividad y el lazo social.</p></article>
           </div>
         </div>
       </div>
